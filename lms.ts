@@ -5,6 +5,7 @@ import { isDate } from "util/types";
 let fees: any = {
   Typescript: 1000,
   SQL: 1000,
+  Python: 1200,
   React: 1500,
   AI: 2000,
   Metaverse: 3000,

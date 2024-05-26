@@ -3,6 +3,7 @@ import inquirer from "inquirer";
 let fees = {
     Typescript: 1000,
     SQL: 1000,
+    Python: 1200,
     React: 1500,
     AI: 2000,
     Metaverse: 3000,
