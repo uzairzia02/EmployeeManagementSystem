@@ -1,6 +1,7 @@
 #! /usr/bin/env node 
 import inquirer from "inquirer";
 console.log("------------------------------------------------------------------\n            WELCOME TO EMPLOYEE MANAGEMENT SYSTEM\n------------------------------------------------------------------");
+//All employees  data will be pushed in it
 let AllEmployeesData = [];
 async function NewEmployee() {
     let empID = await inquirer.prompt({
@@ -33,6 +34,7 @@ async function NewEmployee() {
         type: "input",
         message: "Please Enter Employee Joining Date: ",
     });
+    //new employees data will be pushed in this
     let additionOfEmployee = {
         empID: empID.empID,
         empName: empName.empName,
@@ -41,7 +43,7 @@ async function NewEmployee() {
         empDepartment: empDepartment.empDepartment,
         joiningDate: joiningDate.joiningDate,
     };
-    AllEmployeesData.push(additionOfEmployee);
+    AllEmployeesData.push(additionOfEmployee); // this data will be pushed in the employees data array above
     console.table(AllEmployeesData);
     let addMore = await inquirer.prompt({
         name: "addMore",

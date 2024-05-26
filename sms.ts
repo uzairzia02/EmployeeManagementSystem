@@ -1,6 +1,8 @@
 #! /usr/bin/env node 
 import inquirer from "inquirer";
 
+
+// interface of employees
 interface Employees {
   empID: number;
   empName: string;
@@ -12,7 +14,7 @@ interface Employees {
 
 console.log("------------------------------------------------------------------\n            WELCOME TO EMPLOYEE MANAGEMENT SYSTEM\n------------------------------------------------------------------");
 
-
+//All employees  data will be pushed in it
 let AllEmployeesData: Employees[] = [];
 
 async function NewEmployee() {
@@ -46,6 +48,7 @@ async function NewEmployee() {
     type: "input",
     message: "Please Enter Employee Joining Date: ",
   });
+  //new employees data will be pushed in this
   let additionOfEmployee: Employees = {
     empID: empID.empID,
     empName: empName.empName,
@@ -54,7 +57,7 @@ async function NewEmployee() {
     empDepartment: empDepartment.empDepartment,
     joiningDate: joiningDate.joiningDate,
   };
-  AllEmployeesData.push(additionOfEmployee);
+  AllEmployeesData.push(additionOfEmployee); // this data will be pushed in the employees data array above
   console.table(AllEmployeesData);
 
   let addMore = await inquirer.prompt({
