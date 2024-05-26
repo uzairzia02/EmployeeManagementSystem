@@ -132,7 +132,7 @@ async function finalFees() {
         //console.log(`Thank you for using LMS`);
     }
     console.log(`You have been successfully registered in below courses`);
-    console.log(`\nYour balance fees is ${totalFees}`);
+    //console.log(`\nYour balance fees is ${totalFees}`);
     console.table(StudentData);
     console.log(`Thank you for using LMS`);
 }
